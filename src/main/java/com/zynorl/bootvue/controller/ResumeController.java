@@ -13,7 +13,7 @@ public class ResumeController {
     @Autowired
     private ResumeRepository resumeRepository;
 
-    @GetMapping("/findAll")
+    @GetMapping("/getAll")
     List<Resume> findAll(){
         return resumeRepository.findAll();
     }

@@ -18,9 +18,17 @@ public class AdmireController {
     List<Admire> getAdmireAll(){
         return admireRepository.findAll();
     }
-//
 
-
+    @RequestMapping("/add")
+    public void add(String sf_id,String name,String telephone,String email,String paword){
+        Admire re = new Admire();
+        re.setSf_id(sf_id);
+        re.setName(name);
+        re.setTelephone(telephone);
+        re.setEmail(email);
+        re.setPsword(paword);
+        admireRepository.save(re);
+    }
 
 
 

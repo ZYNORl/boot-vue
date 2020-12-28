@@ -31,7 +31,7 @@ public class Position {
     @Column
     private Integer type;
     @Column
-    private  String edu_bk;
+    private  String edu;
     @Column
     private String lablel;
     @Column
@@ -103,12 +103,12 @@ public class Position {
         this.type = type;
     }
 
-    public String getEdu_bk() {
-        return edu_bk;
+    public String getEdu() {
+        return edu;
     }
 
-    public void setEdu_bk(String edu_bk) {
-        this.edu_bk = edu_bk;
+    public void setEdu(String edu) {
+        this.edu = edu;
     }
 
     public String getLablel() {
@@ -146,8 +146,8 @@ public class Position {
                 .append(address).append('\"');
         sb.append(",\"type\":")
                 .append(type);
-        sb.append(",\"edu_bk\":\"")
-                .append(edu_bk).append('\"');
+        sb.append(",\"edu\":\"")
+                .append(edu).append('\"');
         sb.append(",\"lablel\":\"")
                 .append(lablel).append('\"');
         sb.append(",\"status\":")

@@ -12,7 +12,7 @@ import java.util.List;
 public class companyController {
     @Autowired
     private CompanyRepository companyRepository;
-    @RequestMapping("/find")
+    @RequestMapping("/getAll")
     public List<Company> findAll(){
         return companyRepository.findAll();
 

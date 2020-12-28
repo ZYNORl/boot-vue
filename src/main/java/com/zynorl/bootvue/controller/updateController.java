@@ -28,7 +28,9 @@ public class updateController {
 
         try {
             //指定上传的位置为 d:/upload/
-            String path = "D:\\VUEwork\\vue_project\\boot-vue\\src\\main\\resources\\static\\file\\";
+//            String path = "D:\\VUEwork\\vue_project\\boot-vue\\src\\main\\resources\\static\\file\\";
+            String path = ".\\src\\main\\resources\\static\\file\\";
+
             //获取文件的输入流
             inputStream = file.getInputStream();
             //获取上传时的文件名

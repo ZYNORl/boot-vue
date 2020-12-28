@@ -14,7 +14,7 @@ import java.util.List;
 public class StudentController {
     @Autowired
     private StudentRepository studentRepository;
-    @GetMapping("/findAll")
+    @GetMapping("/getAll")
     List<Student> findAll(){
         return studentRepository.findAll();
     }
