@@ -28,12 +28,6 @@ server:
   port: 89
 
 
-
-
-
-
-
-
   thymeleaf:
     mode: LEGACYHTML5
     encoding: utf-8

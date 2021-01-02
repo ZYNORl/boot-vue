@@ -14,8 +14,8 @@ public interface PositionRepository extends JpaRepository<Position,Integer> {
     List<Position> findByAddress(String address);
     List<Position> findByEdu(String edu);
     List<Position> findByType(Integer type);
+    List<Position> findByPid(Integer pid);
     List<Position> findBySalaryBetweenOrderBySalary(String minsalary,String maxsalary);
-    @Query(value = "from com.zynorl.bootvue.entity.Position where name like '%java%'")
     List<Position> findByNameLike(String name);
 
 

@@ -15,23 +15,19 @@ public class Resume {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
     @Column
-    private String name;
-    @Column
-    private String address;
-    @Column
-    private Integer owner_id;
+    private Integer stuid;
     @Column
     private String date;
-
+    @Column
+    private Integer position_id;
     public Resume() {
     }
 
-    public Resume(Integer id, String name, String address, Integer owner_id, String date) {
+    public Resume(Integer id, Integer stuid, String date, Integer position_id) {
         this.id = id;
-        this.name = name;
-        this.address = address;
-        this.owner_id = owner_id;
+        this.stuid = stuid;
         this.date = date;
+        this.position_id = position_id;
     }
 
     public Integer getId() {
@@ -42,28 +38,12 @@ public class Resume {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getStuid() {
+        return stuid;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Integer getOwner_id() {
-        return owner_id;
-    }
-
-    public void setOwner_id(Integer owner_id) {
-        this.owner_id = owner_id;
+    public void setStuid(Integer stuid) {
+        this.stuid = stuid;
     }
 
     public String getDate() {
@@ -74,19 +54,25 @@ public class Resume {
         this.date = date;
     }
 
+    public Integer getPosition_id() {
+        return position_id;
+    }
+
+    public void setPosition_id(Integer position_id) {
+        this.position_id = position_id;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("{");
         sb.append("\"id\":")
                 .append(id);
-        sb.append(",\"name\":\"")
-                .append(name).append('\"');
-        sb.append(",\"address\":\"")
-                .append(address).append('\"');
-        sb.append(",\"owner_id\":")
-                .append(owner_id);
+        sb.append(",\"stuid\":")
+                .append(stuid);
         sb.append(",\"date\":\"")
                 .append(date).append('\"');
+        sb.append(",\"position_id\":")
+                .append(position_id);
         sb.append('}');
         return sb.toString();
     }
